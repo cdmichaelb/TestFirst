@@ -11,5 +11,9 @@ describe("User Routes and Models", () => {
 			password: "notthebatcave123",
 			passwordcheck: "notthebatcave123",
 		});
+
+		chai.expect(response.body.username).to.exist;
+		chai.expect(response.body.password).to.not.exist;
+		chai.expect(response.status).to.be.eq(201);
 	});
 });
