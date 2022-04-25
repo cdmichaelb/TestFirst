@@ -63,6 +63,7 @@ describe("User Routes and Models", () => {
 			password: "notthebatcave123",
 		});
 
+		this.token = response.body.token;
 		chai.expect(response.body.token).to.exist;
 		chai.expect(response.status).to.be.eq(200);
 	});
