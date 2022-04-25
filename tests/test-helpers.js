@@ -4,6 +4,11 @@ const chaiHttp = require("chai-http");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 
+// run models once, but every time
+const User = require("../models/User.model");
+const Book = require("../models/book.model");
+const Author = require("../models/author.model");
+
 dotenv.config();
 process.env.TESTING = true;
 

@@ -15,19 +15,22 @@ app.use(cors());
 //app.use(morgan("dev"));
 app.use(express.json());
 
-
 app.use("/user", userRoutes);
 
-const startServer = async (port = 3000, hostname = "localhost", database = "TestFirst") => {
-  await connectDatabase(database); // Change database name
+const startServer = async (
+	port = 3000,
+	hostname = "localhost",
+	database = "TestFirst"
+) => {
+	await connectDatabase(database); // Change database name
 
-  app.listen(port, hostname, () => {
-    console.log(`🚀 Listening at ${hostname}:${port}...`);
-  });
+	app.listen(port, hostname, () => {
+		console.log(`🚀 Listening at ${hostname}:${port}...`);
+	});
 };
 
 module.exports = {
-  app,
-  connectDatabase,
-  startServer,
+	app,
+	connectDatabase,
+	startServer,
 };
