@@ -11,15 +11,15 @@ const { connectDatabase } = require("../server");
 
 chai.use(chaiHttp);
 
-setTimeout(() => {
-	before(async () => {
-		this.db = await connectDatabase("test-db");
-		console.log("Connected to test database");
-	});
+// setTimeout(() => {
+// 	before(async () => {
+// 		this.db = await connectDatabase("test-db");
+// 		console.log("Connected to test database");
+// 	});
 
-	after(async () => {
-		await this.db.connection.dropDatabase();
-		await this.db.connection.close();
-		console.log("Database connection closed");
-	});
-});
+// 	after(async () => {
+// 		await this.db.connection.dropDatabase();
+// 		await this.db.connection.close();
+// 		console.log("Database connection closed");
+// 	});
+// });
