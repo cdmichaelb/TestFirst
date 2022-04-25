@@ -9,7 +9,7 @@ describe("User Routes and Models", () => {
 		const response = await chai.request(app).post("/user/signup").send({
 			username: "Batmobile35",
 			password: "notthebatcave123",
-			passwordcheck: "notthebatcave123",
+			passwordCheck: "notthebatcave123",
 		});
 
 		chai.expect(response.body.username).to.exist;
